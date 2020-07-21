@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+    font-family: 'admedi', sans-serif;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+img{
+    border: none;
+}
+h1, h2, h3, h4, h5, h6, a, span, label, p{
+    font-family: 'admedi', sans-serif;
+    font-weight: 400;
+}

@@ -1,0 +1,43 @@
+@charset="utf-8";
+
+.container{width: 100%; height: 100%;}
+.inner-page{width: 96%; max-width: 1300px; height: 100%; margin: 0 auto;}
+.page{width: 100%; height: 100%;}
+
+.gnb{width: 100%; height: 200px; position: fixed; top: -171px; left: 0; z-index: 10; background-color: transparent;}
+.top-menu{width: 96%; max-width: 1300px; height: 170px; background-color: #fff; margin: 0 auto;}
+.top-menu>div{width: 20%; height: 94%; margin-top: 0.5%;}
+.top-menu>div ul{width: 50%; height: 100%; float: left;}
+.top-menu>div ul a{display: block; width: 100%; text-align: center; font-size: 0.9rem; line-height: 1.8; color: #999;}
+.lt-menu{float: left; margin-left: 30px;}
+.rt-menu{float: right; margin-right: 30px;}
+.gnb-wrap{background-color: #fff; width: 96%; max-width: 1300px; height: 60px; margin: 0 auto; margin-top: 20px;}
+
+.gnb-wrap nav{width: 20%; height: 100%; box-sizing: border-box;}
+.gnb-wrap nav li{float: left; width: 50%; box-sizing: border-box; border-bottom: 3px solid transparent;}
+.gnb-wrap nav a{color: #333; line-height: 60px; font-size: 0.95rem; display: block; width: 100%; text-align: center;}
+#lnb{float: left;margin-left: 30px;}
+#rnb{float: right;margin-right: 30px;}
+.gnb-wrap .logo{display: block; width: calc(100% - 40% - 60px); height: 60px; float: left;}
+.gnb-wrap .logo img{display: block; height: 66%; width: auto; margin: 1.5% auto;}
+
+
+#page1{background-color: rgba(0,0,0,0.8); position: relative; }
+#page1 .inner-page{position: relative}
+
+
+.ticketbox{width: 100%; height: 200px; position: absolute; bottom: 0; left: 0; background-color: #444;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
