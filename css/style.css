@@ -12,7 +12,7 @@ a,p,span,li,h1,h2,h3,h4,h5,h6{font-family: 'Handon3gyeopsal600g'}
 .inner-page{width: 96%; max-width: 1300px; height: 100%; margin: 0 auto; position: relative;}
 .page{width: 100%; height: 100%;}
 
-.gnb{width: 100%; height: 200px; position: fixed; top: -171px; left: 0; z-index: 10; background-color: transparent;}
+.gnb{width: 100%; height: 200px; position: fixed; top: -171px; left: 0; z-index: 100; background-color: transparent;}
 .top-menu{width: 96%; max-width: 1300px; height: 170px; background-color: #fff; margin: 0 auto;}
 .top-menu>div{width: 20%; height: 94%; margin-top: 0.5%;}
 .top-menu>div ul{width: 50%; height: 100%; float: left;}
@@ -36,20 +36,57 @@ a,p,span,li,h1,h2,h3,h4,h5,h6{font-family: 'Handon3gyeopsal600g'}
 .ticketbox a{display: block; width: 25%; height: 100%; float: left; line-height: 150px; font-size: 1.3rem; text-align: center;}
 
 #page2{background-color: rgba(0,0,0,0.4);}
-.moviebox{width: 90%; height: 70%; position: absolute; left: 5%; top: 18%; box-sizing: border-box; border-bottom: 2px solid black;}
-.tap{display: block; width: 100%; height: 60px; box-sizing: border-box; border-bottom: 2px solid black; }
-.tap li{display: block; width: 130px; height: 50px; background-color: black; margin-right: 5px; float: left; margin-top: 10px; border-radius: 20px 20px 0 0; box-sizing: border-box; border-bottom: 2px solid black;}
-.tap li:first-child{margin-left: 5px; background-color: #da291c;}
-.tap a{display: block; line-height: 50px; color: #fff; text-align: center;}
+.btnbox{width: 100%; height: 90px; position: relative; top: 50%; left: 0;}
+.btnbox .btn{width: 50px; height: 90px; box-sizing: border-box; border-radius: 10px; background-color: rgba(0,0,0,0.5); float: left; cursor: pointer;}
+.btnbox .btn.leftbtn{display: none;}
+.btnbox .rightbtn{float: right}
+.btnbox .btn{color: #fff; display: block; line-height: 90px; text-align: center; font-size: 30px;}
 
-.moviechart{width: 90%; height: 80%; margin: 1.5% auto;}
+.moviebox{width: 90%; height: 68%; position: absolute; left: 5%; top: 18%; box-sizing: border-box; border-bottom: 2px solid black;}
+.tap{display: block; width: 100%; height: 60px; box-sizing: border-box; border-bottom: 2px solid black; }
+.tap li{display: block; width: 130px; height: 50px; background-color: black; margin-right: 5px; float: left; margin-top: 10px; border-radius: 20px 20px 0 0; box-sizing: border-box; border-bottom: 2px solid black; line-height: 50px; color: #fff; text-align: center; cursor: pointer;}
+.tap li:first-child{margin-left: 5px;}
+.tap li.active{background-color: #da291c;}
+
+.moviechart{width: 100%; height: 80%; margin: 1.5% auto; overflow: hidden;}
 .movie-wrap{width: 200%; height: 100%;}
 .movie-box{width: 50%; height: 100%; float: left;}
-.movie{width: 30%; height: 100%; float: left; margin: 0 1.5%; box-sizing: border-box; background-color: bisque;}
-.movie:first-child{margin-left: 2%;}
-.movie:last-child{margin-right: 2%;}
-.poster{width: 100%; height: 80%;}
-.poster img{display: block; width: auto; height: 100%;
+.movie{width: 23%; height: 100%; float: left; margin: 0 1%; box-sizing: border-box;}
+.movie:first-child{margin-left: 1%;}
+.movie:last-child{margin-right: 1%;}
+.poster{width: 100%; height: 100%; position: relative; overflow: hidden;}
+.rank{position: absolute; width: 60px; height: 60px; z-index: 30; box-sizing: border-box; background-color: #fff; border: 3px solid #da291c; font-size: 38px; font-weight: bold; display: block; text-align: center; line-height: 50px;}
+.poster img{display: block; width: 100%; height: 100%;}
+
+.detail{width: calc(100% - 30px); height: calc(100% - 30px); position: absolute; z-index: 50; background-color: rgba(0,0,0,0.75); top: 100%; left: 0; padding: 15px 15px; }
+
+.detail h4{font-size: 1.7rem; color: #fff; margin-bottom: 10px;}
+.detail span{display: inline; font-size: 14px; color: #999; margin: 0 3px;}
+.detail p{font-family: 'Handon3gyeopsal300g'; color: #fff; font-size: 14px; line-height: 24px; padding: 5px 0; word-wrap: break-word;}
+.detail .release{font-size: 12px; line-height: 6px;}
+.detail p:last-child{font-size: 14px;}
+.line{width: 100%; height: 1px; background-color: #999; margin: 7px 0;}
+.ticket{display: block; width: 150px; height: 40px; margin: 10px auto; text-align: center; box-sizing: border-box; border: 3px solid #da291c; line-height: 34px; font-size: 16px; font-weight: bold; color: #000; background-color: #fff; border-radius: 10px;}
+.ticket:hover{transition: 0.2s; background-color: #da291c; color: #fff;}
+
+#page3{background-color: burlywood}
+.snack-box{width: 90%; height: 55%; position: absolute; top: 20%; left: 5%; overflow: hidden;}
+.snack-wrap{width: 125%; height: 100%;}
+.snack{width: 20%; height: 100%; float: left; position: relative;}
+.snack-image{background-color: #fff; width: 85%; height: 86%; }
+.snack-image img{display: block; width: 80%; height: auto; padding: 20% 10%;}
+.snack-detail{position: absolute; z-index: 5; width: 80%; height: 33%; bottom: 0; right: 7%; box-sizing: border-box; border: 2px solid #da291c; background-color: #fff;}
+.snack-detail h4{font-size: 18px; line-height: 25px; text-align: center; color: #000;}
+.snack-detail p{font-size: 15px; line-height: 22px; text-align: center; color: #000;}
+
+
+footer{width: 100%; height: 200px;}
+.footer-inner{width: 96%; max-width: 1300px; height: 160px; margin: 20px auto;}
+
+
+
+
+
 
 
 
