@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-    var i;
+    var i, index;
     
     // menu
     
@@ -9,7 +9,7 @@ $(document).ready(function () {
         $('.gnb-wrap').stop().animate({'margin-top' : '0px'}, 500);
     });
     $('.gnb').mouseleave(function () {
-        $(this).stop().animate({'top' : '-171px'}, 500);
+        $(this).stop().animate({'top' : '-151px'}, 500);
         $('.gnb-wrap').stop().animate({'margin-top' : '20px'}, 500);
     });
     
@@ -22,15 +22,27 @@ $(document).ready(function () {
         cnt = $(this).attr('data-val') - 1;
         $('.gnb-wrap nav li').eq(cnt).animate({'border-color': 'transparent'}, 400);
     });
+    
+    // video
+    
+    var vid = document.getElementById("myVideo");
+    vid.volume = 0.2;
+    
+    
 
     //tap
     
     $('.tap li').click(function () {
-        $('.moviechart').hide();
+        /*$('.moviechart').hide();*/
+        $('.moviechart').removeClass('active');
         var index = $(this).index();
-        $('.moviechart').eq(index).show();
+        /*$('.moviechart').eq(index).show();*/
+        $('.moviechart').eq(index).addClass('active');
         $('.tap li').removeClass('active');
         $(this).addClass('active');
+        $('.movie-wrap').animate({'margin-left' : '0'}, 500);
+        $('.leftbtn').hide();
+        $('.rightbtn').show();
     })
     
     // movie-wrap
@@ -51,11 +63,11 @@ $(document).ready(function () {
     $('.rightbtn').click(function () {
         var a = 0;
         if(a = 0) {
-            $('.movie-wrap').animate({'margin-left' : '0'}, 500);
+            $('.moviechart.active').find('.movie-wrap').animate({'margin-left' : '0'}, 500);
             $('.leftbtn').show();
             a = 1;
         } else {
-            $('.movie-wrap').animate({'margin-left' : '-100%'}, 500);
+            $('.moviechart.active').find('.movie-wrap').animate({'margin-left' : '-100%'}, 500);
             $(this).hide();
             $('.leftbtn').show();
             i = 0;
@@ -67,6 +79,8 @@ $(document).ready(function () {
     
     for (i = 1; i <= 8; i++) {
         $('.poster').eq(i - 1).find('img').attr('src', 'src/movie' + i + '.jpg');
+        $('.arthouse').eq(i - 1).find('img').attr('src', 'src/arthouse' + i + '.jpg');
+        $('.scheduled').eq(i - 1).find('img').attr('src', 'src/scheduled' + i + '.jpg');
     }
     
     $('.movie').mouseenter(function () {
