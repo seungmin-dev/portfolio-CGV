@@ -62,12 +62,13 @@
     </header>
     <div class="gnbbg"></div>
     <div class="container">
-        <div class="page" id="page1">
+        <div class="page" id="page1" data-page="0">
             <div class="video-box">
                 <video id="myVideo" autoplay="autoplay" preload="auto" muted="muted" volume="0.2" src="./src/bando.webm"></video>
             </div>
             <div class="inner-page">
                 <div class="ticketbox">
+                    <div class="arrow"></div>
                     <div class="ticketbox-inner"><a href="#">영화별 예매</a></div>
                     <div class="ticketbox-inner"><a href="#">극장별 예매</a></div>
                     <div class="ticketbox-inner"><a href="#">상영시간표</a></div>
@@ -75,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="page" id="page2">
+        <div class="page" id="page2" data-page="1">
             <div class="inner-page">
                 <div class="btnbox">
                     <div class="btn leftbtn"><i class="fas fa-chevron-left" aria-hidden="true"></i></div>
@@ -450,7 +451,7 @@
                 </div>
             </div>
         </div>
-        <div class="page" id="page3">
+        <div class="page" id="page3" data-page="2">
             <div class="inner-page">
                 <div class="snack-box">
                     <div class="snack-wrap">
@@ -508,10 +509,45 @@
             </div>
         </div>
         <footer>
-            <div class="footer-inner"></div>
+            <div class="footer-inner">
+                <a href="" class="footer-logo"><img src="./src/logo-footer.svg" alt="logo-footer"></a>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">IR</a></li>
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#">광고/프로모션문의</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">출점문의</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">편성기준</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">이메일주소무단수집거부</a></li>
+                    <li><a href="#">상생경영</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <div class="footer-con-box">
+                    <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+                    <p>대표이사 : 최병환 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</p>
+                    <p>호스팅사업자 : CJ올리브네트웍스 | 개인정보보호 책임자 : 이동현 | 대표이메일 : cjcgvmaster@cj.net | CGV고객센터 : 1544-1122</p>
+                    <p>© CJ CGV. All Rights Reserved</p>
+                </div>
+                <div class="footer-social-box">
+                    <ul>
+                        <li><a href="#"><img src="./src/insta.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="./src/fa.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="./src/tum.png" alt="tumblr"></a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
+        
+        <div class="topbtn-cover">
+            <div class="topbtn-box">
+                <div class="topbtn"></div>
+            </div>
+        </div>
     </div>
-    
     <script src="js/script.js"></script>
 </body>
 </html>
