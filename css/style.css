@@ -83,18 +83,25 @@ a,p,span,li,h1,h2,h3,h4,h5,h6{font-family: 'Handon3gyeopsal600g'}
 
 .poster-slide-cover{width: 100%; height: 100%; overflow: hidden;}
 .poster-slide-wrap{width: 800%; height: 100%;}
+
+.poster-slide-wrap{position: relative;}
+
 .poster-slide{float: left; width: 12.5%; height: 100%; background-size: auto 100%; background-position: center center; background-repeat: no-repeat;}
-.poster-slide.active{transition: 1s; background-size: auto 110%;}
+
+.poster-slide{position: absolute; float: none; top: 0; left: 0; display: none;}
+.poster-slide:last-child{display: block;}
+
+.poster-slide.active{transition: 2s; background-size: auto 105%;}
 
 
-#page2{background-image: url('../src/page2bg.jpg'); background-repeat: no-repeat; background-position: center center; background-size: 100% auto;}
+#page2{background-image: url('../src/page2bg.jpg'); background-repeat: no-repeat; background-position: center center; background-size: 100% auto; height: 70%;}
 .btnbox{width: 100%; height: 90px; position: relative; top: 50%; left: 0;}
 .btnbox .btn{width: 50px; height: 90px; box-sizing: border-box; border-radius: 10px; background-color: rgba(0,0,0,0.5); float: left; cursor: pointer;}
 .btnbox .btn.leftbtn{display: none;}
 .btnbox .rightbtn{float: right}
 .btnbox .btn{color: #fff; display: block; line-height: 90px; text-align: center; font-size: 30px;}
 
-.moviebox{width: 90%; height: 68%; height: 500px; position: absolute; left: 5%; top: 18%; box-sizing: border-box; border-bottom: 2px solid black;}
+.moviebox{width: 90%; height: 68%; height: 500px; position: absolute; left: 5%; top: 10%; box-sizing: border-box; border-bottom: 2px solid black;}
 .tap{display: block; width: 100%; height: 60px; box-sizing: border-box; border-bottom: 2px solid black; }
 .tap li{display: block; width: 130px; height: 50px; background-color: black; margin-right: 5px; float: left; margin-top: 10px; border-radius: 20px 20px 0 0; box-sizing: border-box; border-bottom: 2px solid black; line-height: 50px; color: #fff; text-align: center; cursor: pointer;}
 .tap li:first-child{margin-left: 5px;}
@@ -125,16 +132,16 @@ a,p,span,li,h1,h2,h3,h4,h5,h6{font-family: 'Handon3gyeopsal600g'}
 .ticket:hover{transition: 0.2s; background-color: #da291c; color: #fff;}
 
 
-#page3{background-image: url('../src/page3bg_.jpg'); background-size: 100% auto; background-position: center center;}
+#page3{background-image: url('../src/page3bg_.jpg'); background-size: 100% auto; background-position: center center; height: 70%; background-attachment: fixed;}
 
 .snack-btn-box{position: absolute; width: 100%; height: 70px; top: 50%; right: 0;}
 .snack-btn{width: 70px; height: 70px; cursor: pointer;}
 .snack-btn.left{float: left; display: none;}
 .snack-btn.right{float: right;}
 .snack-btn i{color: #da281c; font-size: 3rem; display: block; text-align: center; animation-name: moveright; animation-iteration-count: infinite; animation-duration: 0.7s;}
-.snack-box{width: 90%; height: 55%; position: absolute; top: 28%; left: 5%; overflow: hidden;}
+.snack-box{width: 90%; height: 75%; position: absolute; top: 20%; left: 5%; overflow: hidden;}
 .snack-wrap{width: 125%; height: 100%;}
-.snack{width: 20%; height: 100%; float: left; position: relative; opacity: 0;}
+.snack{width: 20%; height: 80%; float: left; position: relative; opacity: 0;}
 .snack-image{background-color: #fff; width: 85%; height: 86%; box-sizing: border-box; border: 2px solid #da291c; position: relative; overflow: hidden;}
 .snack-image img{display: block; width: 80%; height: auto; padding: 20% 10%; position: relative;}
 .snack-image .order{width: 100%; height: 100%; background-color: #fff; position: absolute; top: 0; left: -100%; box-sizing: border-box; border: 1px solid #da291c;}
@@ -161,6 +168,13 @@ a,p,span,li,h1,h2,h3,h4,h5,h6{font-family: 'Handon3gyeopsal600g'}
 .snack-more{font-size: 1.5rem; text-align: center; line-height: 210px; color: #fff; position: relative;}
 .snack-more{width: 100%; height: 100%; display: block;}
 .snack-more i{width: 100%; position: absolute; top: 60%; left: 0; font-size: 2rem;}
+
+#page4{height: 70%; background-image: url('../src/page4bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;}
+.event-wrap{width: 90%; height: 50%; margin: 0 auto;}
+.event-box{width: 25%; height: 100%; float: left; background-repeat: no-repeat; background-size: 95% auto; background-position: center;}
+.event-box a{display: block; width: 100%; height: 100%;}
+
+
 
 footer{width: 100%; height: 170px; background-color: #2a2a2a;}
 .footer-inner{width: 96%; max-width: 1300px; height: 150px; padding: 10px 0; margin: 0 auto;}
