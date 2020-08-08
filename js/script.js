@@ -11,7 +11,9 @@ $(document).ready(function () {
         $page3_offsetTop = $("#page3").offset().top,
         $page2_offsetTop = $("#page2").offset().top,
         $page1_offsetTop = $('#page1').offset().top,
-        win_w = $(window).width();
+        $event = $('.event'),
+        win_w = $(window).width(),
+        win_h = $(window).height();
     
     // menu
     
@@ -71,21 +73,24 @@ $(document).ready(function () {
 
     //poster-slide
     
-    for (i = 1; i <= 8; i++) {
-        $('.poster-slide').eq(i - 1).css('background-image', 'url("./src/movie' + i + '.jpg")');
+    for (i = 8; i >= 1; i--) {
+        $('.poster-slide').eq(8 - i).css('background-image', 'url("./src/movie' + i + '.jpg")');
     }
-    
-    var intv = setInterval(function () { bigPoster(); }, 1000),
-        intv2 = setInterval(function () { slidePoster(); }, 2500);
     
     
     function bigPoster() {
-        $('.poster-slide').eq(0).addClass('active');
+        $('.poster-slide').eq(7).addClass('active');
+        $('.poster-slide').eq(0).removeClass('active');
     }
     function slidePoster() {
-        $('.poster-slide').eq(0).appendTo('.poster-slide-wrap');
-        $('.poster-slide').removeClass('active');
+        $('.poster-slide').eq(7).fadeOut(1000);
+        $('.poster-slide').eq(6).fadeIn(400);
+        $('.poster-slide').eq(7).delay(400).prependTo('.poster-slide-wrap');
     }
+    
+    var intv = setInterval(function () { bigPoster(); }, 1000),
+        intv2 = setInterval(function () { slidePoster(); }, 4000);
+    
     
     //tap
     
@@ -134,21 +139,21 @@ $(document).ready(function () {
     
     // snack
     
-    $(window).off("mousewheel DOMMousewheel");
-    $(window).scroll(function () {
-        var pos = $(window).scrollTop();
-        if (pos >= $page3_offsetTop - 1) {
-            var snack_leng = $('.snack').length,
-                $snack = $(".snack");
-            for (i = 0; i < snack_leng; i++) {
-                $snack.eq(0).stop().animate({opacity: "1"}, 200);
-                $snack.eq(i).stop().delay(i * 100).animate({opacity: "1"}, 300);
-            }
-        }
-    });
-    
-    if (768 <= win_h <=991 ) {
+    if (768 <= win_h <= 991) {
         $('.snack').css('opacity', '1');
+    } else {
+        $(window).off("mousewheel DOMMousewheel");
+        $(window).scroll(function () {
+            var pos = $(window).scrollTop();
+            if (pos >= $page3_offsetTop - 1) {
+                var snack_leng = $('.snack').length,
+                    $snack = $(".snack");
+                for (i = 0; i < snack_leng; i++) {
+                    $snack.eq(0).stop().animate({opacity: "1"}, 200);
+                    $snack.eq(i).stop().delay(i * 100).animate({opacity: "1"}, 300);
+                }
+            }
+        });
     }
     
     // snack btn
@@ -164,32 +169,13 @@ $(document).ready(function () {
         $('.snack-btn-box .left').show();
     });
     
+    // event img
     
-    // page scroll
-    // topbtn
     
-    var win_h = $(window).height();
+    for (i = 0; i <= 4; i++) {
+        $('.event-box').eq(i).css('background-image', 'url("./src/event' + i + '.jpg")');
+    }
     
-    $('.page').on("mousewheel", function (e) {
-        var pageVal = parseInt($(this).attr("data-page"));
-
-        var sectionPos = pageVal * win_h;
-        
-        if (e.originalEvent.wheelDelta > 0) { //위로 스크롤시 +1
-            $("body, html").stop().animate({
-                scrollTop: sectionPos - win_h
-            });
-            
-            return false;
-        } else if (e.originalEvent.wheelDelta < 0) { //아래로 스크롤시 -1
-            $("body, html").stop().animate({
-                scrollTop: sectionPos + win_h
-            });
-            
-            return false;
-        }
-
-    });
     
     // top btn
     
@@ -204,7 +190,7 @@ $(document).ready(function () {
         var pos = $(window).scrollTop(),
             win_h2 = win_h * 2 + 150;
         
-        if (pos == 0) {
+        if (pos === 0) {
             $('.topbtn').stop().animate({'opacity' : '0'}, 500);
             $('.topbtn').css('bottom', '10%');
         } else if (pos > win_h2) {
@@ -221,12 +207,15 @@ $(document).ready(function () {
     if (win_w <= 600) {
         $(window).scroll(function () {
             var pos = $(window).scrollTop(),
-            win_h2 = win_h * 2 + 150;
+                win_h2 = win_h * 2 + 150;
             
             if (pos > win_h2) {
                 $('.topbtn').stop().animate({'bottom' : '29%'}, 500);
-            } else {}
+            }
         });
-     }
+     } else {}
+    
+    
+    
     
 });
