@@ -173,7 +173,7 @@ $(document).ready(function () {
     
     
     for (i = 0; i <= 4; i++) {
-        $('.event-box').eq(i).css('background-image', 'url("./src/event' + i + '.jpg")');
+        $('.event-box').eq(i).find('a').css('background-image', 'url("./src/event' + i + '.jpg")');
     }
     
     
