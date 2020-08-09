@@ -170,10 +170,13 @@ a,p,span,li,h1,h2,h3,h4,h5,h6{font-family: 'Handon3gyeopsal600g'}
 .snack-more i{width: 100%; position: absolute; top: 60%; left: 0; font-size: 2rem;}
 
 #page4{height: 70%; background-image: url('../src/page4bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;}
-.event-wrap{width: 90%; height: 50%; margin: 0 auto;}
-.event-box{width: 25%; height: 100%; float: left; background-repeat: no-repeat; background-size: 95% auto; background-position: center;}
-.event-box a{display: block; width: 100%; height: 100%;}
 
+.event-title{font-size: 3rem; line-height: 3.2rem; text-align: center; color: #da291c; padding: 130px 0 0;}
+.event-sub-title{font-size: 1.5rem; line-height: 2rem; text-align: center; color: #848484; padding-bottom: 30px;}
+.event-wrap{width: 90%; height: 40%; margin: 0 auto;}
+.event-box{width: 25%; height: 100%; float: left; }
+.event-box a{display: block; width: 278px; height: 234px; margin-top: 20px; background-repeat: no-repeat; background-size: 100% auto; background-position: center;}
+.event-box a:hover{border-radius: 10px; margin-top: 0; transition: 0.4s;}
 
 
 footer{width: 100%; height: 170px; background-color: #2a2a2a;}
