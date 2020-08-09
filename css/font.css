@@ -1,0 +1,6 @@
+@charset="utf-8";
+@font-face { font-family: 'Handon3gyeopsal300g'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Handon3gyeopsal600g'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal600g.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+a,p,span,li,h1,h2,h3,h4,h5,h6{font-family: 'Handon3gyeopsal600g'}
+.bold{font-family: 'Handon3gyeopsal600g';}

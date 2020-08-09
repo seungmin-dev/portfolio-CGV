@@ -1,0 +1,33 @@
+@charset="utf-8";    
+
+.container{width: 100%; height: 100%;}
+.page{width: 100%; height: 100%; overflow: hidden; background-image: url('../src/loginbg.jpg'); background-size: 100% auto; background-position: center; background-repeat: no-repeat;}
+.inner-page{width: 96%; max-width: 1300px; height: 100%; margin: 0 auto; position: relative;}
+
+.login-box{width: 100%; height: 600px; background-color: rgba(255,255,255,0.4); margin-top: 15%; border-radius: 20px;}
+.login{width: 50%; height: 100%; float: left;}
+.left .title{color: #fff; text-align: center; font-size: 2rem;}
+.left .login-logo{display: block; width: 180px; height: auto; margin: 30px auto;}
+.left .sub-title{color: #ccc; font-size: 1    rem; line-height: 1.8rem; text-align: center; letter-spacing: 2px;}
+
+.login.right{background-color: #fff; border-radius: 0 20px 20px 0;}
+.login-wrap{width: 70%; height: 40%; margin: 25% auto;}
+.right .title{text-align: center; padding: 0px 0 50px 0; color: #000; font-size: 2rem;}
+
+
+.input-wrap{width: 65%; height: 100px; float: left;}
+.input-wrap input{font-family: "FontAwesome"; height: 45px; width: 100%; outline: none; border: none; border: 1px solid #aaa; border-radius: 10px; text-indent: 15px; box-sizing: border-box;}
+input:first-child{margin-bottom: 10px;}
+
+.enter{width: 35%; height: 100px; float: left;}
+.enter .btn{display: block; width: 80%; height: 100%; margin:0 auto; border-radius: 10px; background-color: #da281c; cursor: pointer; color: #fff; text-align: center; line-height: 24px; font-size: 1.1rem; outline: none; border: none;}
+
+.login-wrap a{color: #777; font-size: 15px; line-height: 20px; display: block; margin: 15px 0; float: left; font-weight: 400;}
+
+input[id="cb"] + label {display: inline-block; width: 20px; height: 20px; border: 1px solid #777; box-sizing: border-box; cursor: pointer; margin: 15px 7px 15px 0; float: left; border-radius: 5px;}
+input[id="cb"]:checked + label {background-color: #da281c; border: 1px solid #da281c;}
+input[id="cb"] {display: none;}
+
+#saveid{padding-right: 20px; border-right: 1px solid #777; }
+#forgot{padding: 0 20px; border-right: 1px solid #777;}
+#sign{padding-left: 20px;}
